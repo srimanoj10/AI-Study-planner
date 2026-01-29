@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Core palette - Deep Indigo & Warm Coral */
+    --background: 40 33% 99%;
+    --foreground: 235 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 235 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 235 30% 15%;
+
+    /* Primary - Deep Indigo for focus and intelligence */
+    --primary: 235 65% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Soft lavender */
+    --secondary: 235 30% 95%;
+    --secondary-foreground: 235 30% 25%;
+
+    /* Muted */
+    --muted: 235 15% 94%;
+    --muted-foreground: 235 15% 45%;
+
+    /* Accent - Warm Coral for motivation */
+    --accent: 15 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Success - Mint green */
+    --success: 158 60% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning - Warm amber */
+    --warning: 38 92% 55%;
+    --warning-foreground: 38 92% 15%;
+
+    /* Destructive */
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 235 20% 90%;
+    --input: 235 20% 90%;
+    --ring: 235 65% 52%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(235 65% 52%) 0%, hsl(265 65% 55%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(15 85% 60%) 0%, hsl(35 85% 55%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(158 60% 45%) 0%, hsl(178 60% 45%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(235 65% 52%) 0%, hsl(265 60% 60%) 50%, hsl(15 75% 60%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(235 30% 98%) 100%);
+    
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+    --shadow-glow: 0 0 40px -10px hsl(235 65% 52% / 0.3);
+    --shadow-glow-accent: 0 0 40px -10px hsl(15 85% 60% / 0.3);
+
+    --sidebar-background: 235 30% 98%;
+    --sidebar-foreground: 235 30% 25%;
+    --sidebar-primary: 235 65% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 235 20% 94%;
+    --sidebar-accent-foreground: 235 30% 25%;
+    --sidebar-border: 235 20% 90%;
+    --sidebar-ring: 235 65% 52%;
+  }
+
+  .dark {
+    --background: 235 30% 8%;
+    --foreground: 235 15% 95%;
+
+    --card: 235 30% 12%;
+    --card-foreground: 235 15% 95%;
+
+    --popover: 235 30% 12%;
+    --popover-foreground: 235 15% 95%;
+
+    --primary: 235 65% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 235 25% 18%;
+    --secondary-foreground: 235 15% 85%;
+
+    --muted: 235 25% 18%;
+    --muted-foreground: 235 15% 60%;
+
+    --accent: 15 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 158 55% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 90% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 235 25% 20%;
+    --input: 235 25% 20%;
+    --ring: 235 65% 60%;
+
+    --sidebar-background: 235 30% 10%;
+    --sidebar-foreground: 235 15% 90%;
+    --sidebar-primary: 235 65% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 235 25% 15%;
+    --sidebar-accent-foreground: 235 15% 90%;
+    --sidebar-border: 235 25% 18%;
+    --sidebar-ring: 235 65% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-glow-accent {
+    box-shadow: var(--shadow-glow-accent);
+  }
+
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/20 backdrop-blur-xl border border-white/10;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px -5px hsl(235 65% 52% / 0.4); }
+  50% { box-shadow: 0 0 40px -5px hsl(235 65% 52% / 0.6); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes slide-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out forwards;
+}
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
