@@ -1,73 +1,206 @@
-# Welcome to your Lovable project
+# 📘 Smart Learning Planner (AI‑Powered Study App)
 
-## Project info
+An intelligent, multi‑page study planning web application that helps students **study smarter, not longer** using **AI reasoning, scheduling algorithms, habit science, and productivity techniques**.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 🚀 Overview
 
-There are several ways of editing your application.
+Smart Learning Planner dynamically creates personalized study plans based on:
 
-**Use Lovable**
+* Exam dates
+* User goals
+* Weak subjects
+* Daily available study time
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+The system adapts continuously using confidence tracking, spaced repetition, and habit‑building mechanics like streaks and rewards.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## ✨ Key Features
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+* 🧠 **AI‑Generated Study Plans**
+* 📅 **Daily & Weekly Scheduling**
+* 🎯 **Weak Subject & Topic Prioritization**
+* 🔁 **Spaced Repetition Revision System**
+* ⏱️ **Pomodoro Focus Timer**
+* 🔥 **Study Streaks & Rewards**
+* 👥 **Group Study Mode**
+* 📊 **Progress Analytics & Insights**
+* 🎥 **YouTube Resource Recommendations**
+* 🧪 **Confidence‑Based Topic Tracking**
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🧩 Application Pages
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 1. Landing Page
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+* App introduction & value proposition
+* Call‑to‑action buttons
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 2. User Profile & Exam Setup
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+* Exam date & goal
+* Weak subject selection (confidence slider)
+* Daily available time
+
+### 3. AI Planner Dashboard
+
+* Today’s study plan
+* Subject priority ranking
+* Exam countdown
+
+### 4. Daily Study Schedule
+
+* Time‑blocked sessions
+* Pomodoro‑based study blocks
+* Completion & rescheduling options
+
+### 5. Topic Priority & Confidence Tracking
+
+* Confidence score per topic
+* Last studied date
+* Mistake frequency
+
+### 6. Revision Timetable
+
+* Spaced repetition (1‑day, 7‑day, 21‑day)
+* Auto‑generated revision calendar
+
+### 7. Weekly Progress & Analytics
+
+* Planned vs actual study hours
+* Subject‑wise progress charts
+* AI feedback & insights
+
+### 8. Pomodoro Focus Mode
+
+* 25/5 and 50/10 timers
+* Auto‑session continuation
+* Focus music
+
+### 9. Streaks & Rewards
+
+* Daily and weekly streaks
+* XP points & badges
+* Habit reinforcement
+
+### 10. Group Study Mode
+
+* Shared study rooms
+* Live focus sessions
+* Accountability features
+
+### 11. YouTube Recommendations
+
+* Topic‑based video suggestions
+* Time‑optimized learning content
+
+### 12. Settings & Personalization
+
+* Update goals & exam dates
+* Notification preferences
+* AI strictness level
+
+---
+
+## 🧠 AI & Algorithm Logic
+
+### Scheduling Algorithm
+
+* Exam proximity
+* Subject weakness
+* Daily available time
+
+### AI Reasoning Rules
+
+* Weak topics get higher priority
+* Strong topics move to revision mode
+* Missed sessions auto‑rescheduled
+
+### Habit Science
+
+* Rewards consistency
+* Gentle penalties for inactivity
+* Encourages recovery after breaks
+
+---
+
+## 🛠️ Tech Stack (Suggested)
+
+**Frontend:** React / Next.js
+**Backend:** Node.js / FastAPI
+**Database:** MongoDB / PostgreSQL
+**AI Logic:** Rule‑based + LLM‑ready
+**Auth:** Email / Google OAuth
+
+---
+
+## 📦 Data Model (High‑Level)
+
+```json
+User {
+  examDate,
+  goal,
+  dailyTime,
+  subjects[],
+  topics[],
+  confidenceScores,
+  streaks,
+  progress
+}
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🛣️ Development Roadmap
 
-**Use GitHub Codespaces**
+### Phase 1 (MVP)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+* User setup
+* Daily planner
+* Pomodoro timer
+* Progress tracking
 
-## What technologies are used for this project?
+### Phase 2
 
-This project is built with:
+* AI prioritization
+* Revision system
+* Confidence tracking
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Phase 3
 
-## How can I deploy this project?
+* Group study
+* Rewards system
+* YouTube recommendations
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 🎯 Target Users
 
-Yes, you can!
+* School & college students
+* Competitive exam aspirants
+* Self‑learners & online course students
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🤝 Contribution
+
+This project is open for experimentation and learning. Feel free to extend:
+
+* ML‑based personalization
+* Mobile app version
+* Advanced analytics
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+### 💡 Motto
+
+> *"Discipline beats motivation — but smart systems beat both."* 🚀
